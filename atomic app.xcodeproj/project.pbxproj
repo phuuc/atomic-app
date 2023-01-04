@@ -10,7 +10,6 @@
 		BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351929653CA800D647AC /* AppDelegate.swift */; };
 		BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351B29653CA800D647AC /* SceneDelegate.swift */; };
 		BED6351E29653CA800D647AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351D29653CA800D647AC /* ViewController.swift */; };
-		BED6352129653CA800D647AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED6351F29653CA800D647AC /* Main.storyboard */; };
 		BED6352329653CA900D647AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED6352229653CA900D647AC /* Assets.xcassets */; };
 		BED6352629653CA900D647AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED6352429653CA900D647AC /* LaunchScreen.storyboard */; };
 		BED6353129653CA900D647AC /* atomic_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353029653CA900D647AC /* atomic_appTests.swift */; };
@@ -40,7 +39,6 @@
 		BED6351929653CA800D647AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED6351B29653CA800D647AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BED6351D29653CA800D647AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BED6352029653CA800D647AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BED6352229653CA900D647AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED6352529653CA900D647AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED6352729653CA900D647AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				BED6351929653CA800D647AC /* AppDelegate.swift */,
 				BED6351B29653CA800D647AC /* SceneDelegate.swift */,
 				BED6351D29653CA800D647AC /* ViewController.swift */,
-				BED6351F29653CA800D647AC /* Main.storyboard */,
 				BED6352229653CA900D647AC /* Assets.xcassets */,
 				BED6352429653CA900D647AC /* LaunchScreen.storyboard */,
 				BED6352729653CA900D647AC /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				BED6352629653CA900D647AC /* LaunchScreen.storyboard in Resources */,
 				BED6352329653CA900D647AC /* Assets.xcassets in Resources */,
-				BED6352129653CA800D647AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BED6351F29653CA800D647AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BED6352029653CA800D647AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BED6352429653CA900D647AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +430,9 @@
 				INFOPLIST_FILE = "atomic app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +458,9 @@
 				INFOPLIST_FILE = "atomic app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
