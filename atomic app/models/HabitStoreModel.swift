@@ -15,8 +15,8 @@ struct HabitStoreModel {
 	}
 
 	private mutating func createHabit() {
-		let rdNames = ["Run", "Drink", "Gym", "Read"]
-		for _ in 0 ..< 10 {
+		let rdNames = ["Run Run Run Run Run Run Run Run Run Run Run Run Run Run Run Run ", "Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink Drink", "Gym", "Read"]
+		for _ in 0 ..< 20 {
 			let rdName = rdNames.randomElement()!
 			habitStore.append(HabitModel(name: rdName))
 		}

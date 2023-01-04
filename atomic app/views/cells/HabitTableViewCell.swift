@@ -13,13 +13,15 @@ class HabitTableViewCell: UITableViewCell {
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-		addSubview(nameLabel)
+		contentView.addSubview(nameLabel)
+		
+		NSLayoutConstraint.activate([
+			nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+			nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8),
+			nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+			nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
 
-		nameLabel.translatesAutoresizingMaskIntoConstraints = false
-		nameLabel.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-		nameLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-		nameLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-		nameLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+		])
 	}
 
 	@available(*, unavailable)

@@ -7,35 +7,45 @@
 
 import UIKit
 
-class HabitViewController: UITableViewController {
-	// private var habitView: HabitView!
+class HabitViewController: UIViewController {
+	let habitView = HabitView()
+	lazy var tableView: UITableView = {
+		let tab = UITableView()
+		tab.tableFooterView = UIView()
+		tab.backgroundColor = UIColor.clear
+		tab.delegate = self
+		tab.dataSource = self
+		tab.translatesAutoresizingMaskIntoConstraints = false
+		return tab
+	}()
+
 	var habitStoreModel: HabitStoreModel!
 	private var cellIndentifier = "cell"
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
-		tableView = UITableView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height), style: .plain)
-		tableView.delegate = self
-		tableView.dataSource = self
+
+		view.addSubview(tableView)
+
+		NSLayoutConstraint.activate([
+			tableView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 8),
+			tableView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -8),
+			tableView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 8),
+			tableView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 8)
+		])
 		tableView.register(HabitTableViewCell.self, forCellReuseIdentifier: cellIndentifier)
-		print("called numberOfRowsInSection")
 	}
 
-//	override func loadView() {
-//		view = HabitView()
-//	}
+	override func loadView() {
+		view = habitView
+	}
 }
 
-extension HabitViewController {
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		print("called numberOfRowsInSection")
+extension HabitViewController: UITableViewDelegate, UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return habitStoreModel.habitStore.count
 	}
 
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		print("called cellForRowAt")
-
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellIndentifier, for: indexPath) as! HabitTableViewCell
 
 		let habit = habitStoreModel.find(at: indexPath.row)
@@ -43,5 +53,9 @@ extension HabitViewController {
 		cell.nameLabel.text = habit.name
 
 		return cell
+	}
+
+	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableView.automaticDimension
 	}
 }

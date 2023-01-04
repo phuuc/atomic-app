@@ -20,7 +20,9 @@ class Label: UILabel {
 
 	func initializeLabel() {
 		self.textAlignment = .left
-		self.font = UIFont(name: "Halvetica", size: 17)
+		self.font = UIFont(name: "Halvetica", size: 16)
 		self.textColor = .black
+		self.translatesAutoresizingMaskIntoConstraints = false
+		self.numberOfLines = 0
 	}
 }
