@@ -21,6 +21,7 @@
 		BED63556296561EC00D647AC /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED63555296561EC00D647AC /* HabitModel.swift */; };
 		BED635582965634700D647AC /* HabitStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635572965634700D647AC /* HabitStoreModel.swift */; };
 		BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6355A2965657200D647AC /* HabitTableViewCell.swift */; };
+		BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635602965BAE200D647AC /* HabitTableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BED63555296561EC00D647AC /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 		BED635572965634700D647AC /* HabitStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStoreModel.swift; sourceTree = "<group>"; };
 		BED6355A2965657200D647AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
+		BED635602965BAE200D647AC /* HabitTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,7 @@
 		BED635492965465300D647AC /* views */ = {
 			isa = PBXGroup;
 			children = (
-				BED635592965654900D647AC /* cells */,
-				BED6354D2965546E00D647AC /* HabitView.swift */,
+				BED635592965654900D647AC /* habit */,
 				BED63553296557EE00D647AC /* BaseView.swift */,
 			);
 			path = views;
@@ -190,12 +191,14 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		BED635592965654900D647AC /* cells */ = {
+		BED635592965654900D647AC /* habit */ = {
 			isa = PBXGroup;
 			children = (
+				BED6354D2965546E00D647AC /* HabitView.swift */,
 				BED6355A2965657200D647AC /* HabitTableViewCell.swift */,
+				BED635602965BAE200D647AC /* HabitTableDataSource.swift */,
 			);
-			path = cells;
+			path = habit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +337,7 @@
 				BED63554296557EE00D647AC /* BaseView.swift in Sources */,
 				BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */,
 				BED635522965566B00D647AC /* Label.swift in Sources */,
+				BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */,
 				BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */,
 				BED635582965634700D647AC /* HabitStoreModel.swift in Sources */,
 				BED63556296561EC00D647AC /* HabitModel.swift in Sources */,
