@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351929653CA800D647AC /* AppDelegate.swift */; };
 		BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351B29653CA800D647AC /* SceneDelegate.swift */; };
-		BED6351E29653CA800D647AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351D29653CA800D647AC /* ViewController.swift */; };
+		BED6351E29653CA800D647AC /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351D29653CA800D647AC /* HabitViewController.swift */; };
 		BED6352329653CA900D647AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED6352229653CA900D647AC /* Assets.xcassets */; };
 		BED6352629653CA900D647AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED6352429653CA900D647AC /* LaunchScreen.storyboard */; };
 		BED6353129653CA900D647AC /* atomic_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353029653CA900D647AC /* atomic_appTests.swift */; };
 		BED6353B29653CA900D647AC /* atomic_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353A29653CA900D647AC /* atomic_appUITests.swift */; };
 		BED6353D29653CA900D647AC /* atomic_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353C29653CA900D647AC /* atomic_appUITestsLaunchTests.swift */; };
+		BED6354E2965546E00D647AC /* HabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6354D2965546E00D647AC /* HabitView.swift */; };
+		BED635522965566B00D647AC /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635512965566B00D647AC /* Label.swift */; };
+		BED63554296557EE00D647AC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED63553296557EE00D647AC /* BaseView.swift */; };
+		BED63556296561EC00D647AC /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED63555296561EC00D647AC /* HabitModel.swift */; };
+		BED635582965634700D647AC /* HabitStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635572965634700D647AC /* HabitStoreModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		BED6351629653CA800D647AC /* atomic app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atomic app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED6351929653CA800D647AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED6351B29653CA800D647AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BED6351D29653CA800D647AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BED6351D29653CA800D647AC /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		BED6352229653CA900D647AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED6352529653CA900D647AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED6352729653CA900D647AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		BED6353629653CA900D647AC /* atomic appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atomic appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED6353A29653CA900D647AC /* atomic_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic_appUITests.swift; sourceTree = "<group>"; };
 		BED6353C29653CA900D647AC /* atomic_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BED6354D2965546E00D647AC /* HabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitView.swift; sourceTree = "<group>"; };
+		BED635512965566B00D647AC /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		BED63553296557EE00D647AC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BED63555296561EC00D647AC /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
+		BED635572965634700D647AC /* HabitStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStoreModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +107,12 @@
 		BED6351829653CA800D647AC /* atomic app */ = {
 			isa = PBXGroup;
 			children = (
-				BED6351929653CA800D647AC /* AppDelegate.swift */,
-				BED6351B29653CA800D647AC /* SceneDelegate.swift */,
-				BED6351D29653CA800D647AC /* ViewController.swift */,
-				BED6352229653CA900D647AC /* Assets.xcassets */,
+				BED635502965565600D647AC /* common */,
+				BED6354F2965547700D647AC /* controllers */,
+				BED6354C2965541500D647AC /* models */,
+				BED6354B2965508C00D647AC /* app */,
+				BED635492965465300D647AC /* views */,
+				BED6354A2965506200D647AC /* resources */,
 				BED6352429653CA900D647AC /* LaunchScreen.storyboard */,
 				BED6352729653CA900D647AC /* Info.plist */,
 			);
@@ -122,6 +134,57 @@
 				BED6353C29653CA900D647AC /* atomic_appUITestsLaunchTests.swift */,
 			);
 			path = "atomic appUITests";
+			sourceTree = "<group>";
+		};
+		BED635492965465300D647AC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BED6354D2965546E00D647AC /* HabitView.swift */,
+				BED63553296557EE00D647AC /* BaseView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BED6354A2965506200D647AC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BED6352229653CA900D647AC /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		BED6354B2965508C00D647AC /* app */ = {
+			isa = PBXGroup;
+			children = (
+				BED6351929653CA800D647AC /* AppDelegate.swift */,
+				BED6351B29653CA800D647AC /* SceneDelegate.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		BED6354C2965541500D647AC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				BED63555296561EC00D647AC /* HabitModel.swift */,
+				BED635572965634700D647AC /* HabitStoreModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		BED6354F2965547700D647AC /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BED6351D29653CA800D647AC /* HabitViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		BED635502965565600D647AC /* common */ = {
+			isa = PBXGroup;
+			children = (
+				BED635512965566B00D647AC /* Label.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED6351E29653CA800D647AC /* ViewController.swift in Sources */,
+				BED6351E29653CA800D647AC /* HabitViewController.swift in Sources */,
+				BED6354E2965546E00D647AC /* HabitView.swift in Sources */,
 				BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */,
+				BED63554296557EE00D647AC /* BaseView.swift in Sources */,
+				BED635522965566B00D647AC /* Label.swift in Sources */,
 				BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */,
+				BED635582965634700D647AC /* HabitStoreModel.swift in Sources */,
+				BED63556296561EC00D647AC /* HabitModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
