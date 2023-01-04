@@ -11,6 +11,7 @@ class BaseView: UIView {
 	// This initializer hides init(frame:) from subclasses
 	init() {
 		super.init(frame: CGRect.zero)
+		self.backgroundColor = .systemBackground
 	}
 
 	// This attribute hides `init(coder:)` from subclasses

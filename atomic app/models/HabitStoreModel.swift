@@ -8,7 +8,7 @@
 import UIKit
 
 struct HabitStoreModel {
-	private var habitStore = [HabitModel]()
+	private(set) var habitStore = [HabitModel]()
 
 	init() {
 		createHabit()
@@ -16,9 +16,13 @@ struct HabitStoreModel {
 
 	private mutating func createHabit() {
 		let rdNames = ["Run", "Drink", "Gym", "Read"]
-		let rdName = rdNames.randomElement()!
 		for _ in 0 ..< 10 {
+			let rdName = rdNames.randomElement()!
 			habitStore.append(HabitModel(name: rdName))
 		}
+	}
+
+	func find(at index: Int) -> HabitModel {
+		return habitStore[index]
 	}
 }
