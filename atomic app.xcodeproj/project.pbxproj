@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BED544DC29667F1B00270D30 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED544DB29667F1B00270D30 /* CalendarExtension.swift */; };
 		BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351929653CA800D647AC /* AppDelegate.swift */; };
 		BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351B29653CA800D647AC /* SceneDelegate.swift */; };
 		BED6351E29653CA800D647AC /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351D29653CA800D647AC /* HabitViewController.swift */; };
@@ -22,6 +23,8 @@
 		BED635582965634700D647AC /* HabitStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635572965634700D647AC /* HabitStoreModel.swift */; };
 		BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6355A2965657200D647AC /* HabitTableViewCell.swift */; };
 		BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635602965BAE200D647AC /* HabitTableDataSource.swift */; };
+		BED635632965BE4900D647AC /* HabitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635622965BE4900D647AC /* HabitCollectionViewCell.swift */; };
+		BED635652965BE8300D647AC /* HabitCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635642965BE8300D647AC /* HabitCollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BED544DB29667F1B00270D30 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		BED6351629653CA800D647AC /* atomic app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atomic app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED6351929653CA800D647AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED6351B29653CA800D647AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		BED635572965634700D647AC /* HabitStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStoreModel.swift; sourceTree = "<group>"; };
 		BED6355A2965657200D647AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		BED635602965BAE200D647AC /* HabitTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableDataSource.swift; sourceTree = "<group>"; };
+		BED635622965BE4900D647AC /* HabitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewCell.swift; sourceTree = "<group>"; };
+		BED635642965BE8300D647AC /* HabitCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCollectionViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BED544DA29667CAC00270D30 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BED544DB29667F1B00270D30 /* CalendarExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		BED6350D29653CA800D647AC = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +200,7 @@
 		BED635502965565600D647AC /* common */ = {
 			isa = PBXGroup;
 			children = (
+				BED544DA29667CAC00270D30 /* extensions */,
 				BED635512965566B00D647AC /* Label.swift */,
 			);
 			path = common;
@@ -197,6 +212,8 @@
 				BED6354D2965546E00D647AC /* HabitView.swift */,
 				BED6355A2965657200D647AC /* HabitTableViewCell.swift */,
 				BED635602965BAE200D647AC /* HabitTableDataSource.swift */,
+				BED635622965BE4900D647AC /* HabitCollectionViewCell.swift */,
+				BED635642965BE8300D647AC /* HabitCollectionViewDataSource.swift */,
 			);
 			path = habit;
 			sourceTree = "<group>";
@@ -335,9 +352,12 @@
 				BED6354E2965546E00D647AC /* HabitView.swift in Sources */,
 				BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */,
 				BED63554296557EE00D647AC /* BaseView.swift in Sources */,
+				BED635632965BE4900D647AC /* HabitCollectionViewCell.swift in Sources */,
+				BED635652965BE8300D647AC /* HabitCollectionViewDataSource.swift in Sources */,
 				BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */,
 				BED635522965566B00D647AC /* Label.swift in Sources */,
 				BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */,
+				BED544DC29667F1B00270D30 /* CalendarExtension.swift in Sources */,
 				BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */,
 				BED635582965634700D647AC /* HabitStoreModel.swift in Sources */,
 				BED63556296561EC00D647AC /* HabitModel.swift in Sources */,
