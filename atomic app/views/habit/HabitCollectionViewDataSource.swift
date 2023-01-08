@@ -17,8 +17,7 @@ class HabitCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCellIndentifier, for: indexPath) as! HabitCollectionViewCell
 
-		cell.dayOfMonth.text = "24"
+		// cell.dayOfMonth.text = currentWeek[indexPath.row]
 		return cell
 	}
-	
 }

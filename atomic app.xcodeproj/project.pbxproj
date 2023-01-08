@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE69D75B296B067900EBECB4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69D75A296B067900EBECB4 /* DateExtension.swift */; };
+		BE69D75D296B07EE00EBECB4 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69D75C296B07EE00EBECB4 /* UIStackView.swift */; };
+		BE69D75F296B114000EBECB4 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69D75E296B114000EBECB4 /* ArrayExtension.swift */; };
 		BED544DC29667F1B00270D30 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED544DB29667F1B00270D30 /* CalendarExtension.swift */; };
 		BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351929653CA800D647AC /* AppDelegate.swift */; };
 		BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351B29653CA800D647AC /* SceneDelegate.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE69D75A296B067900EBECB4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BE69D75C296B07EE00EBECB4 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		BE69D75E296B114000EBECB4 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		BED544DB29667F1B00270D30 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		BED6351629653CA800D647AC /* atomic app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atomic app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED6351929653CA800D647AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				BED544DB29667F1B00270D30 /* CalendarExtension.swift */,
+				BE69D75A296B067900EBECB4 /* DateExtension.swift */,
+				BE69D75C296B07EE00EBECB4 /* UIStackView.swift */,
+				BE69D75E296B114000EBECB4 /* ArrayExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -349,14 +358,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED6351E29653CA800D647AC /* HabitViewController.swift in Sources */,
+				BE69D75B296B067900EBECB4 /* DateExtension.swift in Sources */,
 				BED6354E2965546E00D647AC /* HabitView.swift in Sources */,
 				BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */,
 				BED63554296557EE00D647AC /* BaseView.swift in Sources */,
 				BED635632965BE4900D647AC /* HabitCollectionViewCell.swift in Sources */,
 				BED635652965BE8300D647AC /* HabitCollectionViewDataSource.swift in Sources */,
+				BE69D75D296B07EE00EBECB4 /* UIStackView.swift in Sources */,
 				BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */,
 				BED635522965566B00D647AC /* Label.swift in Sources */,
 				BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */,
+				BE69D75F296B114000EBECB4 /* ArrayExtension.swift in Sources */,
 				BED544DC29667F1B00270D30 /* CalendarExtension.swift in Sources */,
 				BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */,
 				BED635582965634700D647AC /* HabitStoreModel.swift in Sources */,
