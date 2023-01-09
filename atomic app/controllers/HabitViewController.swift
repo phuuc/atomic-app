@@ -53,13 +53,6 @@ class HabitViewController: UIViewController {
 		return tab
 	}()
 
-	lazy var navBar: UINavigationBar = {
-		let screenSize: CGRect = UIScreen.main.bounds
-		let navBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: 30))
-		navBar.translatesAutoresizingMaskIntoConstraints = false
-		return navBar
-	}()
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		view.backgroundColor = .systemBackground
@@ -78,35 +71,36 @@ class HabitViewController: UIViewController {
 			stackView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 8),
 			stackView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -8),
 			stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-			stackView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 8),
-		])
-
-		NSLayoutConstraint.activate([
-			calendarStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-			calendarStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-		])
-
-		NSLayoutConstraint.activate([
-			tableView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-			tableView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
+			stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 8),
 		])
 	}
 
 	func setNavigationBar() {
-		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: #selector(rightBarButtonAction))
+		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightBarButtonAction))
+	}
+
+	private func setupCalendarStackView() {
+		let weekdaySymbols = Date.getWeekdaySymbols()
+		for i in 0 ... 6 {
+			let dayOfWeek = UIButton()
+			dayOfWeek.backgroundColor = .systemTeal
+			dayOfWeek.setTitle(weekdaySymbols[i], for: .normal)
+			dayOfWeek.tintColor = .white
+			dayOfWeek.tag = i
+
+			dayOfWeek.addTarget(self, action: #selector(calendarButtonPressed), for: .touchUpInside)
+
+			calendarStackView.addArrangedSubview(dayOfWeek)
+		}
 	}
 
 	@objc func rightBarButtonAction() {
 		navigationController?.pushViewController(addEditHabitViewController, animated: true)
 	}
 
-	private func setupCalendarStackView() {
-		let weekdaySymbols = Date.getWeekdaySymbols()
-		for i in 0 ... 6 {
-			let dayOfWeek = Label()
-			dayOfWeek.text = weekdaySymbols[i]
-			calendarStackView.addArrangedSubview(dayOfWeek)
-		}
+	@objc func calendarButtonPressed(_ sender: UIButton) {
+		let date = week()[sender.tag]
+		title = date
 	}
 
 	private func week() -> [String] {
