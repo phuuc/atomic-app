@@ -19,15 +19,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let habitTableDataSource = HabitTableDataSource()
 		habitTableDataSource.habitStoreModel = habitStoreModel
 
-		//let habitCollectionDataSource = HabitCollectionViewDataSource()
-
 		let habitViewController = HabitViewController()
-		habitViewController.habitTableDataSource = habitTableDataSource
-		// habitViewController.habitCollectionDataSource = habitCollectionDataSource
+		let habitNavigationController = UINavigationController(rootViewController: habitViewController)
 
+		let addEditHabitViewController = AddEditHabitViewController()
+		habitViewController.addEditHabitViewController = addEditHabitViewController
+		habitViewController.habitTableDataSource = habitTableDataSource
+		
 		window = UIWindow(frame: windowScreen.coordinateSpace.bounds)
 		window?.windowScene = windowScreen
-		window?.rootViewController = habitViewController
+		window?.rootViewController = habitNavigationController
 		window?.makeKeyAndVisible()
 	}
 
