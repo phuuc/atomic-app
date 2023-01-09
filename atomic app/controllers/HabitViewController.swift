@@ -47,12 +47,11 @@ class HabitViewController: UIViewController {
 		tab.backgroundColor = .clear
 		tab.delegate = self
 		tab.dataSource = habitTableDataSource
+		tab.showsVerticalScrollIndicator = false
 		tab.translatesAutoresizingMaskIntoConstraints = false
 
 		return tab
 	}()
-
-
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -74,21 +73,21 @@ class HabitViewController: UIViewController {
 		NSLayoutConstraint.activate([
 			stackView.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 8),
 			stackView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -8),
-			stackView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-			stackView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 8)
+			stackView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 4),
+			stackView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor, constant: 8),
 		])
 
 		NSLayoutConstraint.activate([
 			calendarStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
 			calendarStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-			calendarStackView.topAnchor.constraint(equalTo: stackView.topAnchor),
-			calendarStackView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.1)
+			// calendarStackView.topAnchor.constraint(equalTo: stackView.topAnchor),
+			// calendarStackView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.1)
 		])
 
 		NSLayoutConstraint.activate([
 			tableView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
 			tableView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
-			tableView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.9)
+			// tableView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.9)
 
 		])
 	}

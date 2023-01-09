@@ -12,6 +12,7 @@ class BaseView: UIView {
 	init() {
 		super.init(frame: CGRect.zero)
 		self.backgroundColor = .systemBackground
+		self.translatesAutoresizingMaskIntoConstraints = false
 	}
 
 	// This attribute hides `init(coder:)` from subclasses

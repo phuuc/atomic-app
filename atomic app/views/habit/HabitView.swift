@@ -10,10 +10,5 @@ import UIKit
 class HabitView: BaseView {
 	override init() {
 		super.init()
-		self.translatesAutoresizingMaskIntoConstraints = false
-	}
-
-	override func layoutSubviews() {
-		super.layoutSubviews()
 	}
 }
