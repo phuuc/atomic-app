@@ -9,6 +9,7 @@ import UIKit
 
 class HabitViewController: UIViewController {
 	var onDay = Date()
+	var currentWeek: [String]!
 
 	var habitTableDataSource: HabitTableDataSource!
 	var addEditHabitViewController: AddEditHabitViewController!
@@ -57,12 +58,13 @@ class HabitViewController: UIViewController {
 		super.viewDidLoad()
 		view.backgroundColor = .systemBackground
 		setNavigationBar()
-		// view.addSubview(navBar)
+		currentWeek = week()
 		view.addSubview(stackView)
 		stackView.addArrangedSubview(calendarStackView)
 		stackView.addArrangedSubview(tableView)
 		setupCalendarStackView()
 		setUpConstraints()
+		setupSwipeCalendar()
 		tableView.register(HabitTableViewCell.self, forCellReuseIdentifier: habitTableDataSource.tableCellIndentifier)
 	}
 
@@ -94,12 +96,55 @@ class HabitViewController: UIViewController {
 		}
 	}
 
+	private func setupSwipeCalendar() {
+		let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipedCalendar))
+		swipeRight.direction = .right
+
+		let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipedCalendar))
+		swipeLeft.direction = .left
+
+		stackView.arrangedSubviews.first?.addGestureRecognizer(swipeRight)
+		stackView.arrangedSubviews.first?.addGestureRecognizer(swipeLeft)
+	}
+
+	@objc private func swipedCalendar(_ gesture: UIGestureRecognizer) {
+		let boundsWidth = calendarStackView.bounds.width
+		if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+			switch swipeGesture.direction {
+				case .right:
+					currentWeek = lastWeek()
+					UIView.animate(withDuration: getDuration(), animations: {
+						self.calendarStackView.center.x = 2 * boundsWidth
+					}, completion: { _ in
+						self.calendarStackView.center.x -= 2 * boundsWidth
+						UIView.animate(withDuration: self.getDuration(), animations: {
+							self.calendarStackView.center.x = boundsWidth / 2
+						}, completion: nil)
+					})
+
+				case .left:
+					currentWeek = nextWeek()
+					UIView.animate(withDuration: getDuration(), animations: {
+						self.calendarStackView.center.x -= 2 * boundsWidth
+					}, completion: { _ in
+						self.calendarStackView.center.x = 2 * boundsWidth
+						UIView.animate(withDuration: self.getDuration(), animations: {
+							self.calendarStackView.center.x = boundsWidth / 2
+						}, completion: nil)
+					})
+
+				default: break
+			}
+		}
+		calendarStackView.reloadInputViews()
+	}
+
 	@objc func rightBarButtonAction() {
 		navigationController?.pushViewController(addEditHabitViewController, animated: true)
 	}
 
 	@objc func calendarButtonPressed(_ sender: UIButton) {
-		let date = week()[sender.tag]
+		let date = currentWeek[sender.tag]
 		title = date
 	}
 
@@ -116,6 +161,10 @@ class HabitViewController: UIViewController {
 	private func nextWeek() -> [String]! {
 		onDay = onDay.nextWeek(using: calendar)
 		return calendar.getWeekString(from: onDay)
+	}
+
+	private func getDuration() -> TimeInterval {
+		return 0.2
 	}
 }
 
