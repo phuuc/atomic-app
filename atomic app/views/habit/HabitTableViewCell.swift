@@ -12,9 +12,8 @@ class HabitTableViewCell: UITableViewCell {
 
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
-
 		contentView.addSubview(nameLabel)
-		
+
 		NSLayoutConstraint.activate([
 			nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
 			nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8),

@@ -9,6 +9,8 @@ import UIKit
 
 class HabitViewController: UIViewController {
 	let habitView = HabitView()
+	var onDay = Date()
+
 	var habitTableDataSource: HabitTableDataSource!
 	// var habitCollectionDataSource: HabitCollectionViewDataSource!
 	lazy var calendar: Calendar = {
@@ -50,42 +52,7 @@ class HabitViewController: UIViewController {
 		return tab
 	}()
 
-//	lazy var mon: UILabel = {
-//		return Label()
-//	}()
-//	lazy var tue: UILabel = {
-//		return Label()
-//	}()
-//	lazy var wed: UILabel = {
-//		return Label()
-//	}()
-//	lazy var thu: UILabel = {
-//		return Label()
-//	}()
-//	lazy var fri: UILabel = {
-//		return Label()
-//	}()
-//	lazy var sat: UILabel = {
-//		return Label()
-//	}()
-//	lazy var sun: UILabel = {
-//		return Label()
-//	}()
 
-	var onDay = Date()
-
-//	lazy var collectionView: UICollectionView = {
-//		let layout = UICollectionViewFlowLayout()
-//		layout.scrollDirection = .horizontal
-//		layout.minimumInteritemSpacing = 0.0
-//		let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//		collectionView.delegate = self
-//		collectionView.dataSource = habitCollectionDataSource
-//		collectionView.backgroundColor = .clear
-//		collectionView.showsHorizontalScrollIndicator = false
-//		collectionView.translatesAutoresizingMaskIntoConstraints = false
-//		return collectionView
-//	}()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -113,20 +80,14 @@ class HabitViewController: UIViewController {
 
 		NSLayoutConstraint.activate([
 			calendarStackView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-			calendarStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8),
+			calendarStackView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
 			calendarStackView.topAnchor.constraint(equalTo: stackView.topAnchor),
 			calendarStackView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.1)
 		])
 
-//		NSLayoutConstraint.activate([
-//			collectionView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-//			collectionView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8),
-//			collectionView.topAnchor.constraint(equalTo: stackView.topAnchor),
-//			collectionView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.1)
-//		])
 		NSLayoutConstraint.activate([
 			tableView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-			tableView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor, constant: -8),
+			tableView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
 			tableView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.9)
 
 		])
@@ -139,14 +100,6 @@ class HabitViewController: UIViewController {
 			dayOfWeek.text = weekdaySymbols[i]
 			calendarStackView.addArrangedSubview(dayOfWeek)
 		}
-
-//		calendarStackView.addArrangedSubview(mon)
-//		calendarStackView.addArrangedSubview(tue)
-//		calendarStackView.addArrangedSubview(wed)
-//		calendarStackView.addArrangedSubview(thu)
-//		calendarStackView.addArrangedSubview(fri)
-//		calendarStackView.addArrangedSubview(sat)
-//		calendarStackView.addArrangedSubview(sun)
 	}
 
 	private func week() -> [String] {

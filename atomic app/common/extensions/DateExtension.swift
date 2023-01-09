@@ -23,7 +23,7 @@ extension Date {
 	}
 	
 	static func getWeekdaySymbols() -> [String] {
-		var symbols = DateFormatter().shortWeekdaySymbols!
+		var symbols = DateFormatter().veryShortWeekdaySymbols!
 		
 		symbols.shiftLeft()
 		
