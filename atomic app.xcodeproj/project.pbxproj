@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE69D75B296B067900EBECB4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69D75A296B067900EBECB4 /* DateExtension.swift */; };
+		BE69D75F296B114000EBECB4 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69D75E296B114000EBECB4 /* ArrayExtension.swift */; };
+		BEBB901A296C09BD0032B160 /* AddEditHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBB9019296C09BC0032B160 /* AddEditHabitViewController.swift */; };
+		BED544DC29667F1B00270D30 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED544DB29667F1B00270D30 /* CalendarExtension.swift */; };
 		BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351929653CA800D647AC /* AppDelegate.swift */; };
 		BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351B29653CA800D647AC /* SceneDelegate.swift */; };
-		BED6351E29653CA800D647AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351D29653CA800D647AC /* ViewController.swift */; };
+		BED6351E29653CA800D647AC /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6351D29653CA800D647AC /* HabitViewController.swift */; };
 		BED6352329653CA900D647AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BED6352229653CA900D647AC /* Assets.xcassets */; };
 		BED6352629653CA900D647AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED6352429653CA900D647AC /* LaunchScreen.storyboard */; };
 		BED6353129653CA900D647AC /* atomic_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353029653CA900D647AC /* atomic_appTests.swift */; };
 		BED6353B29653CA900D647AC /* atomic_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353A29653CA900D647AC /* atomic_appUITests.swift */; };
 		BED6353D29653CA900D647AC /* atomic_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6353C29653CA900D647AC /* atomic_appUITestsLaunchTests.swift */; };
+		BED635522965566B00D647AC /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635512965566B00D647AC /* Label.swift */; };
+		BED63554296557EE00D647AC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED63553296557EE00D647AC /* BaseView.swift */; };
+		BED63556296561EC00D647AC /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED63555296561EC00D647AC /* HabitModel.swift */; };
+		BED635582965634700D647AC /* HabitStoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635572965634700D647AC /* HabitStoreModel.swift */; };
+		BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED6355A2965657200D647AC /* HabitTableViewCell.swift */; };
+		BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED635602965BAE200D647AC /* HabitTableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE69D75A296B067900EBECB4 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		BE69D75E296B114000EBECB4 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		BEBB9019296C09BC0032B160 /* AddEditHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditHabitViewController.swift; sourceTree = "<group>"; };
+		BED544DB29667F1B00270D30 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
 		BED6351629653CA800D647AC /* atomic app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atomic app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED6351929653CA800D647AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BED6351B29653CA800D647AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BED6351D29653CA800D647AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BED6351D29653CA800D647AC /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 		BED6352229653CA900D647AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BED6352529653CA900D647AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BED6352729653CA900D647AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +61,12 @@
 		BED6353629653CA900D647AC /* atomic appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atomic appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED6353A29653CA900D647AC /* atomic_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic_appUITests.swift; sourceTree = "<group>"; };
 		BED6353C29653CA900D647AC /* atomic_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atomic_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BED635512965566B00D647AC /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		BED63553296557EE00D647AC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BED63555296561EC00D647AC /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
+		BED635572965634700D647AC /* HabitStoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitStoreModel.swift; sourceTree = "<group>"; };
+		BED6355A2965657200D647AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
+		BED635602965BAE200D647AC /* HabitTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BED544DA29667CAC00270D30 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BED544DB29667F1B00270D30 /* CalendarExtension.swift */,
+				BE69D75A296B067900EBECB4 /* DateExtension.swift */,
+				BE69D75E296B114000EBECB4 /* ArrayExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		BED6350D29653CA800D647AC = {
 			isa = PBXGroup;
 			children = (
@@ -97,10 +127,12 @@
 		BED6351829653CA800D647AC /* atomic app */ = {
 			isa = PBXGroup;
 			children = (
-				BED6351929653CA800D647AC /* AppDelegate.swift */,
-				BED6351B29653CA800D647AC /* SceneDelegate.swift */,
-				BED6351D29653CA800D647AC /* ViewController.swift */,
-				BED6352229653CA900D647AC /* Assets.xcassets */,
+				BED635502965565600D647AC /* common */,
+				BED6354F2965547700D647AC /* controllers */,
+				BED6354C2965541500D647AC /* models */,
+				BED6354B2965508C00D647AC /* app */,
+				BED635492965465300D647AC /* views */,
+				BED6354A2965506200D647AC /* resources */,
 				BED6352429653CA900D647AC /* LaunchScreen.storyboard */,
 				BED6352729653CA900D647AC /* Info.plist */,
 			);
@@ -122,6 +154,68 @@
 				BED6353C29653CA900D647AC /* atomic_appUITestsLaunchTests.swift */,
 			);
 			path = "atomic appUITests";
+			sourceTree = "<group>";
+		};
+		BED635492965465300D647AC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BED635592965654900D647AC /* habit */,
+				BED63553296557EE00D647AC /* BaseView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BED6354A2965506200D647AC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				BED6352229653CA900D647AC /* Assets.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		BED6354B2965508C00D647AC /* app */ = {
+			isa = PBXGroup;
+			children = (
+				BED6351929653CA800D647AC /* AppDelegate.swift */,
+				BED6351B29653CA800D647AC /* SceneDelegate.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		BED6354C2965541500D647AC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				BED63555296561EC00D647AC /* HabitModel.swift */,
+				BED635572965634700D647AC /* HabitStoreModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		BED6354F2965547700D647AC /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BED6351D29653CA800D647AC /* HabitViewController.swift */,
+				BEBB9019296C09BC0032B160 /* AddEditHabitViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		BED635502965565600D647AC /* common */ = {
+			isa = PBXGroup;
+			children = (
+				BED544DA29667CAC00270D30 /* extensions */,
+				BED635512965566B00D647AC /* Label.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		BED635592965654900D647AC /* habit */ = {
+			isa = PBXGroup;
+			children = (
+				BED6355A2965657200D647AC /* HabitTableViewCell.swift */,
+				BED635602965BAE200D647AC /* HabitTableDataSource.swift */,
+			);
+			path = habit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +348,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BED6351E29653CA800D647AC /* ViewController.swift in Sources */,
+				BED6351E29653CA800D647AC /* HabitViewController.swift in Sources */,
+				BE69D75B296B067900EBECB4 /* DateExtension.swift in Sources */,
 				BED6351A29653CA800D647AC /* AppDelegate.swift in Sources */,
+				BED63554296557EE00D647AC /* BaseView.swift in Sources */,
+				BED6355B2965657200D647AC /* HabitTableViewCell.swift in Sources */,
+				BED635522965566B00D647AC /* Label.swift in Sources */,
+				BED635612965BAE200D647AC /* HabitTableDataSource.swift in Sources */,
+				BE69D75F296B114000EBECB4 /* ArrayExtension.swift in Sources */,
+				BEBB901A296C09BD0032B160 /* AddEditHabitViewController.swift in Sources */,
+				BED544DC29667F1B00270D30 /* CalendarExtension.swift in Sources */,
 				BED6351C29653CA800D647AC /* SceneDelegate.swift in Sources */,
+				BED635582965634700D647AC /* HabitStoreModel.swift in Sources */,
+				BED63556296561EC00D647AC /* HabitModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
