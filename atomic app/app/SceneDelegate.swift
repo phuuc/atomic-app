@@ -25,10 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let addEditHabitViewController = AddEditHabitViewController()
 		habitViewController.addEditHabitViewController = addEditHabitViewController
 		habitViewController.habitTableDataSource = habitTableDataSource
-		
+
 		window = UIWindow(frame: windowScreen.coordinateSpace.bounds)
 		window?.windowScene = windowScreen
-		window?.rootViewController = habitNavigationController
+		// window?.rootViewController = habitNavigationController
+		window?.rootViewController = addEditHabitViewController
 		window?.makeKeyAndVisible()
 	}
 
