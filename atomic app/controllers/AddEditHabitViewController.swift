@@ -7,7 +7,12 @@
 
 import UIKit
 
+protocol AddEditHabitViewControllerDelegate: AnyObject {
+	func addEditHabitViewcontroller(_ controller: AddEditHabitViewController, didfinishAdding habitStore: HabitModel)
+}
+
 class AddEditHabitViewController: UIViewController {
+	weak var delegate: AddEditHabitViewControllerDelegate?
 	lazy var stackView: UIStackView = {
 		let stackView = UIStackView()
 		stackView.axis = .vertical
@@ -61,7 +66,6 @@ class AddEditHabitViewController: UIViewController {
 		iconButton.backgroundColor = .systemTeal
 		return iconButton
 	}()
-	
 
 	lazy var completeButton: UIButton = {
 		let completeButton = UIButton()
@@ -69,6 +73,7 @@ class AddEditHabitViewController: UIViewController {
 		completeButton.translatesAutoresizingMaskIntoConstraints = false
 
 		completeButton.backgroundColor = .systemTeal
+		completeButton.addTarget(self, action: #selector(addHabit), for: .touchUpInside)
 		return completeButton
 	}()
 
@@ -85,8 +90,13 @@ class AddEditHabitViewController: UIViewController {
 		stackView.addArrangedSubview(iconButtonContainer)
 		iconButtonContainer.addSubview(iconButton)
 		stackView.addArrangedSubview(completeButton)
-
+		nameTextField.delegate = self
 		setConstraint()
+	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		nameTextField.becomeFirstResponder()
 	}
 
 	private func setConstraint() {
@@ -100,18 +110,70 @@ class AddEditHabitViewController: UIViewController {
 		NSLayoutConstraint.activate([
 			iconButtonContainer.heightAnchor.constraint(equalToConstant: 30),
 		])
-//		NSLayoutConstraint.activate([
-//			completeButton.heightAnchor.constraint(equalToConstant: 30),
-//		])
 	}
 
-	/*
-	 // MARK: - Navigation
+	@objc private func addHabit() {
+		var habit = HabitModel()
+		habit.name = nameTextField.text
+		habit.icon = iconButton.titleLabel?.text
+		
+		delegate?.addEditHabitViewcontroller(self, didfinishAdding: habit)
 
-	 // In a storyboard-based application, you will often want to do a little preparation before navigation
-	 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-	     // Get the new view controller using segue.destination.
-	     // Pass the selected object to the new view controller.
-	 }
-	 */
+		print("called add habit")
+	}
 }
+
+extension AddEditHabitViewController: UITextFieldDelegate {
+//	func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//		// return NO to disallow editing.
+//		print("TextField should begin editing method called")
+//		return true
+//	}
+//
+//	func textFieldDidBeginEditing(_ textField: UITextField) {
+//		// became first responder
+//		print("TextField did begin editing method called")
+//	}
+//
+//	func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+//		// return YES to allow editing to stop and to resign first responder status. NO to disallow the editing session to end
+//		print("TextField should snd editing method called")
+//		return true
+//	}
+//
+//	func textFieldDidEndEditing(_ textField: UITextField) {
+//		// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
+//
+//		print("TextField did end editing method called")
+//	}
+//
+//	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+//		// if implemented, called in place of textFieldDidEndEditing:
+//		print("TextField did end editing with reason method called")
+//	}
+
+//	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//		// return NO to not change text
+//		nameTextField.text = textField.text
+//		print("While entering the characters this method gets called")
+//		print(nameTextField.text!)
+//
+//		return true
+//	}
+
+	func textFieldShouldClear(_ textField: UITextField) -> Bool {
+		// called when clear button pressed. return NO to ignore (no notifications)
+		print("TextField should clear method called")
+		return true
+	}
+
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		// called when 'return' key pressed. return NO to ignore.
+		print("TextField should return method called")
+		nameTextField.resignFirstResponder()
+
+		return true
+	}
+}
+
+//// MARK: UITextFieldDelegate <---

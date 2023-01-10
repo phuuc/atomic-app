@@ -28,8 +28,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		window = UIWindow(frame: windowScreen.coordinateSpace.bounds)
 		window?.windowScene = windowScreen
-		// window?.rootViewController = habitNavigationController
-		window?.rootViewController = addEditHabitViewController
+		window?.rootViewController = habitNavigationController
+		// window?.rootViewController = addEditHabitViewController
 		window?.makeKeyAndVisible()
 	}
 

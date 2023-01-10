@@ -8,11 +8,8 @@
 import UIKit
 
 struct HabitModel {
-	var name: String
-	
-	init(name: String) {
-		self.name = name
-	}
-	
-	
+	var name: String?
+	var icon: String?
+
+	init() {}
 }

@@ -59,13 +59,15 @@ class HabitViewController: UIViewController {
 		view.backgroundColor = .systemBackground
 		setNavigationBar()
 		currentWeek = week()
-		view.addSubview(stackView)
 		stackView.addArrangedSubview(calendarStackView)
 		stackView.addArrangedSubview(tableView)
+		view.addSubview(stackView)
+
 		setupCalendarStackView()
 		setUpConstraints()
 		setupSwipeCalendar()
 		tableView.register(HabitTableViewCell.self, forCellReuseIdentifier: habitTableDataSource.tableCellIndentifier)
+		addEditHabitViewController.delegate = self
 	}
 
 	private func setUpConstraints() {
@@ -168,8 +170,22 @@ class HabitViewController: UIViewController {
 	}
 }
 
-extension HabitViewController: UITableViewDelegate, UICollectionViewDelegate {
+extension HabitViewController: UITableViewDelegate, AddEditHabitViewControllerDelegate {
+	func addEditHabitViewcontroller(_ controller: AddEditHabitViewController, didfinishAdding habitStore: HabitModel) {
+		let newRowIndex = habitTableDataSource.habitStoreModel.habitStore.count
+		habitTableDataSource.habitStoreModel.habitStore.append(habitStore)
+		let indexPath = IndexPath(row: newRowIndex, section: 0)
+		let indexPaths = [indexPath]
+		tableView.insertRows(at: indexPaths, with: .automatic)
+		navigationController?.popViewController(animated: true)
+	}
+
 	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
 		return UITableView.automaticDimension
+	}
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		print(indexPath.item)
+		navigationController?.pushViewController(addEditHabitViewController, animated: true)
 	}
 }
